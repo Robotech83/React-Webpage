@@ -1,0 +1,70 @@
+/* ===== TOPBAR ===== */
+
+.topbar {
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.topbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== LEFT SIDE: Contact Info ===== */
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar-left span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  color: #ccc;
+}
+
+/* Add vertical separator lines */
+.topbar-left span:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 14px;
+  width: 1px;
+  background-color: white;
+}
+
+/* ===== ICON COLOR ===== */
+.topbar-left i,
+.topbar-right i {
+  color:var(--primary-color);
+}
+
+/* ===== RIGHT SIDE: Support Button + Icons ===== */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* SOCIAL ICONS */
+.topbar-social a {
+  color: #ccc;
+  margin-left: 10px;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.topbar-social a:hover {
+  color: #f9c57e;
+}
+
