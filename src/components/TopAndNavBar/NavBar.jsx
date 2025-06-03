@@ -1,4 +1,5 @@
 import React from "react";
+import { Hamburger } from "../Hambuger/Hambuger";
 
 //import './navBar.css';
 
@@ -13,6 +14,7 @@ import React from "react";
             <a href="#projects" className="navbar-link">Projects</a>
             <a href="#contact" className="navbar-link">Contact</a>
             </div>
+            <Hamburger />
         </div>
         </div>
     );
