@@ -10,6 +10,7 @@ import Header from './components/Header/Header';
 import Robotics from './Pages/Robotics';
 import Footer from './components/Footer/Footer';
 import Subfooter from './components/Footer/Subfooter';
+import { SearchBox } from './components/SearchBox/SearchBox';
 
 //import './assets/css/projects/topBar.css';
 //import './assets/css/projects/navBar.css'
