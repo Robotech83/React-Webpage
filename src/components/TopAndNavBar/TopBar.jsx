@@ -1,6 +1,6 @@
 import React from 'react';
 
-//import './topBar.css'
+import './topBar.css'
 
 export const TopBar = () => { //named export
   return (
