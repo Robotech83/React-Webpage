@@ -24,29 +24,15 @@ function App() {
        <TopBar/>
         <NavBar/>
         <Header />
-      <Robotics />
-
-        <div className="footer">
-          <Footer />
-          <Subfooter />
-        </div>
-
-    </div>
- </ThemeUIProvider>
-{/* 
-    <ThemeUIProvider theme={theme}> 
-      <div className="something-wrapper">
-        <TopBar/>
-        <NavBar/>
-        <Header />
         <Robotics />
 
         <div className="footer">
           <Footer />
           <Subfooter />
         </div>
-      </div>
-    </ThemeUIProvider> */}
+    </div>
+ </ThemeUIProvider>
+
     </>
   );
 }
