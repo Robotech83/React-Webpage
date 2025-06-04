@@ -9,9 +9,11 @@ import Robotics from './Pages/Robotics';
 import Footer from './components/Footer/Footer';
 import Subfooter from './components/Footer/Subfooter';
 
+
+
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeUIProvider theme={theme}>
       <div>
         <TopBar />
         <NavBar />
@@ -22,7 +24,7 @@ function App() {
           <Subfooter />
         </div>
       </div>
-    </ThemeProvider>
+    </ThemeUIProvider>
   );
 }
 

@@ -2,8 +2,8 @@
 import React from "react";
 import { Box } from "theme-ui";
 import { Hamburger } from "../Hambuger/Hambuger";
-import DarkModeToggle from "../DarkMode/DarkMode";
 // import DarkModeToggle from "../DarkMode/DarkMode";
+import DarkModeToggle from "../DarkMode/DarkMode";
 
 export const NavBar = () => {
   return (
@@ -19,6 +19,9 @@ export const NavBar = () => {
         py: 3,
       }}
     >
+
+      <Box sx={{color:'text'}}>hello</Box>
+      
       <Box sx={{ display: "flex", gap: 3 }}>
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -27,7 +30,7 @@ export const NavBar = () => {
       </Box>
 
       <Box sx={{ display: "flex", gap: 3 }}>
-        <DarkMode />
+        <DarkModeToggle />
         <Hamburger />
       </Box>
     </Box>

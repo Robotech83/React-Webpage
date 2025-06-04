@@ -1,13 +1,18 @@
-/** @jsxImportSource theme-ui */
+
 import React from "react";
-import { useColorMode, Button } from "theme-ui";
+import {  Button, useColorMode } from "theme-ui";
 
 const DarkModeToggle = () => {
   const [colorMode, setColorMode] = useColorMode();
 
+
+  const handleColorModeChange = () => {
+    setColorMode(colorMode === "default" ? "dark" : "default")
+  };
+
   return (
     <Button
-      onClick={() => setColorMode(colorMode === "default" ? "dark" : "default")}
+      onClick={handleColorModeChange}
       sx={{
         variant: "buttons.primary",
         bg: "transparent",
