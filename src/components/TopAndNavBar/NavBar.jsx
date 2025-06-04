@@ -1,5 +1,6 @@
 import React from "react";
 import { Hamburger } from "../Hambuger/Hambuger";
+import DarkModeToggle from "../DarkMode/DarkMode";
 
 //import './navBar.css';
 
@@ -14,6 +15,7 @@ import { Hamburger } from "../Hambuger/Hambuger";
             <a href="#projects" className="navbar-link">Projects</a>
             <a href="#contact" className="navbar-link">Contact</a>
             </div>
+            <DarkModeToggle />
             <Hamburger />
         </div>
         </div>
