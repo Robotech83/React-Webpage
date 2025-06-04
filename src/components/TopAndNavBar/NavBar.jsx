@@ -1,24 +1,35 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
+import { Box } from "theme-ui";
 import { Hamburger } from "../Hambuger/Hambuger";
 import DarkModeToggle from "../DarkMode/DarkMode";
+// import DarkModeToggle from "../DarkMode/DarkMode";
 
-//import './navBar.css';
+export const NavBar = () => {
+  return (
+    <Box
+      className="navbar"
+      sx={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        bg: "background", // 👈 will now switch with dark mode
+        color: "text",     // 👈 will now switch with dark mode
+        px: 4,
+        py: 3,
+      }}
+    >
+      <Box sx={{ display: "flex", gap: 3 }}>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </Box>
 
-// This component defines a navigation bar with links to different sections of the portfolio website.
- export const NavBar = () => {
-    return (
-        <div className="navbar">
-        <div className="navbar-container">
-            <div className="navbar-left">
-            <a href="#home" className="navbar-link">Home</a>
-            <a href="#about" className="navbar-link">About</a>
-            <a href="#projects" className="navbar-link">Projects</a>
-            <a href="#contact" className="navbar-link">Contact</a>
-            </div>
-            <DarkModeToggle />
-            <Hamburger />
-        </div>
-        </div>
-    );
-    }
-
+      <Box sx={{ display: "flex", gap: 3 }}>
+        <DarkMode />
+        <Hamburger />
+      </Box>
+    </Box>
+  );
+};

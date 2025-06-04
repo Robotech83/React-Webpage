@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'theme-ui'; // ✅ Correct
+import { ThemeUIProvider } from 'theme-ui'; 
 import { theme } from './theme/theme';
 
 import { TopBar } from './components/TopAndNavBar/TopBar';
