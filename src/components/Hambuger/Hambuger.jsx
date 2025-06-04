@@ -1,30 +1,22 @@
-import React from "react";
-
 /** @jsxImportSource theme-ui */
-import { Box, IconButton } from "theme-ui";
+import { IconButton } from "theme-ui";
 
-export const Hamburger = () => {
-  const handleToggle = () => {
-    if (typeof window !== "undefined" && window.toggleSideMenu) {
-      window.toggleSideMenu();
-    }
-  };
-
+const Hamburger = ({ onToggle }) => {
   return (
-    <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center", width: "100%" }}>
-      <IconButton
-        onClick={handleToggle}
-        sx={{
-          bg: "transparent", // Transparent background
-          color: "#ff7714",
-          ml: "auto",        // Moves the button to the right
-          fontSize: 4,       // Responsive font size (Theme UI scale)
-          p: 2,              // Padding
-          cursor: "pointer",
-        }}
-      >
-        <i className="fa-solid fa-bars" />
-      </IconButton>
-    </Box>
+    <IconButton
+      onClick={onToggle}
+      sx={{
+        bg: "transparent",
+        color: "#ff7714",
+        ml: "auto",
+        fontSize: 4,
+        p: 2,
+        cursor: "pointer",
+      }}
+    >
+      <i className="fa-solid fa-bars" />
+    </IconButton>
   );
 };
+
+export default Hamburger;
