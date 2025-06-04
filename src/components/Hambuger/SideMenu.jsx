@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 import { Box, Button } from "theme-ui";
 
-const SideMenu = ({ onClose }) => {
+export const SideMenu = ({ onClose }) => {
   return (
     <Box
       sx={{
@@ -38,4 +38,4 @@ const SideMenu = ({ onClose }) => {
   );
 };
 
-export default SideMenu;
+
