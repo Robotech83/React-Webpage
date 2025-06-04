@@ -1,32 +1,43 @@
 import React, { useState } from "react";
-/** @jsxImportSource theme-ui */
+/** @jsxImportSource theme-ui */ // Enables Theme UI styling syntax
 import { Box, IconButton } from "theme-ui";
-import { SideMenu } from "./SideMenu"; // ✅ Import external component
+import { SideMenu } from "./SideMenu"; // Import external SideMenu component
 
+// Hamburger component controls toggle state and displays the button
 export const Hamburger = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // State to track menu open/closed
 
+  // Toggle function: open if closed, close if open
   const handleToggle = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen((prev) => !prev);
   };
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center", width: "100%" }}>
+    <Box
+      sx={{
+        display: "flex",              // Horizontal layout
+        justifyContent: "flex-end",   // Align to the right
+        alignItems: "center",
+        width: "100%",                // Full width of container
+      }}
+    >
+      {/* Hamburger Icon Button */}
       <IconButton
         onClick={handleToggle}
         sx={{
-          bg: "transparent",
-          color: "#ff7714",
-          ml: "auto",
-          fontSize: 4,
-          p: 2,
+          bg: "transparent",          // No background
+          color: "#ff7714",           // Bright orange text/icon color
+          ml: "auto",                 // Push to the right
+          fontSize: 4,                // Theme UI scale (~24px)
+          p: 2,                       // Padding for click area
           cursor: "pointer",
         }}
       >
-        <i className="fa-solid fa-bars" />
+        <i className="fa-solid fa-bars" /> {/* Font Awesome "hamburger" icon */}
       </IconButton>
 
-      {menuOpen && <SideMenu onClose={() => setMenuOpen(false)} />}
+      {/* Always render SideMenu and control its visibility via props */}
+      <SideMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </Box>
   );
 };
