@@ -1,8 +1,7 @@
-/** @jsxImportSource theme-ui */
+
 import React from "react";
 import { Box } from "theme-ui";
 import { Hamburger } from "../Hambuger/Hambuger";
-// import DarkModeToggle from "../DarkMode/DarkMode";
 import DarkModeToggle from "../DarkMode/DarkMode";
 
 export const NavBar = () => {
