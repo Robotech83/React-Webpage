@@ -5,10 +5,12 @@ import React  from "react";
 const header = () => {
     return (
         <div className="page-header">
-        <h1>My Robotics Projects</h1>
+        <div className="page-header-title">
+          <h1>Robotics Projects</h1>
         <p>A showcase of my AI-integrated robotics systems.</p>
       </div>
-    )
+      </div>
+    );
 }
 
 export default header;

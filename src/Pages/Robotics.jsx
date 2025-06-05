@@ -7,7 +7,6 @@ import { ProjectCrd } from '../components/ProjectCards/Card.jsx';
 const Robotics = () => {
   return (
     <>
-    <div className='project-card-header'>
     <ProjectCrd
   title="Sonny Voice Assistant"
   description="Online AI assistant built with Python, OpenAI, and Pyttsx3."
@@ -18,7 +17,6 @@ const Robotics = () => {
   description="AI assistant running on Raspberry Pi with voice recognition."
   github="https://github.com/Robotech83/Sonny_voice-on-Pi"
 />
-    </div>
     </>
   );
 }

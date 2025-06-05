@@ -8,6 +8,7 @@ import Header from './components/Header/Header';
 import Robotics from './Pages/Robotics';
 import Footer from './components/Footer/Footer';
 import Subfooter from './components/Footer/Subfooter';
+import { WebDev } from './Pages/WebDev';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
         <TopBar />
         <NavBar />
         <Header />
-        <Robotics />
+        <WebDev />
         <div className="footer">
           <Footer />
           <Subfooter />
