@@ -1,4 +1,7 @@
-export const ProjectCrd = ({ title, description, github }) => {
+import React from 'react';
+import './RoboticCard.css'; // Assuming you have a CSS file for styling
+
+export const RoboticCard = ({ title, description, github }) => {
   return (
     <section className="project-grid">
       <div className="project-card">

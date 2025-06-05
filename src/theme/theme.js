@@ -80,6 +80,55 @@ export const theme = {
     },
   },
 
+  cardGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: 4,
+    maxWidth: '1000px',
+    mx: 'auto',
+    mt: 5,
+    px: 3,
+  },
+  card: {
+    backgroundColor: 'background',
+    color: 'text',
+    borderRadius: 3,
+    overflow: 'hidden',
+    textAlign: 'center',
+    boxShadow: '0 4px 10px rgba(0,0,0,0.5)',
+    transition: 'transform 0.3s ease',
+    ':hover': {
+      transform: 'scale(1.03)',
+    },
+  },
+  cardTitle: {
+    mt: 3,
+    mb: 2,
+    fontSize: 3,
+    fontWeight: 'bold',
+  },
+  cardText: {
+    px: 3,
+    mb: 3,
+    color: 'text',
+    opacity: 0.85,
+  },
+  cardLink: {
+    display: 'inline-block',
+    mt: 2,
+    mb: 4,
+    px: 3,
+    py: 2,
+    bg: 'primary',
+    color: 'background',
+    borderRadius: 2,
+    fontWeight: 'bold',
+    textDecoration: 'none',
+    transition: 'background 0.3s ease',
+    ':hover': {
+      backgroundColor: '#e0ac58',
+    },
+  },
   buttons: {
     close: {
       bg: 'transparent',
