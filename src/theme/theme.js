@@ -33,6 +33,18 @@ export const theme = {
       lineHeight: 'body',
       mb: 3,
     },
+    navLink: {
+  textTransform: 'uppercase',
+  color: 'text',
+  fontWeight: 'bold',
+  textDecoration: 'none',
+  px: 3,
+  py: 2,
+  ':hover': {
+    color: 'primary',
+  },
+}
+
     contactText: {
       fontSize: 1,
       mt: 3,
