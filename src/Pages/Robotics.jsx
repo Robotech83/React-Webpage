@@ -1,14 +1,27 @@
 import React from 'react';
 
-
-import { ProjectCrd } from '../components/ProjectCards/Card.jsx';
+import Header from '../components/Header/Header.jsx';
+import { RoboticCard } from '../components/ProjectCards/RoboticCard.jsx';
 
 
 const Robotics = () => {
   return (
     <>
+    <Header
+      title="Robotics Projects"
+      description="A showcase of my AI-integrated robotics systems."
+    />
     <div className='project-card-header'>
-    <ProjectCrd />
+    <RoboticCard
+  title="Sonny Voice Assistant"
+  description="Online AI assistant built with Python, OpenAI, and Pyttsx3."
+  github="https://github.com/Robotech83/Sonny-Voice"
+/>
+    <RoboticCard
+  title="Sonny on a Raspberry Pi"
+  description="AI assistant running on Raspberry Pi with voice recognition."
+  github="https://github.com/Robotech83/Sonny_voice-on-Pi"
+/>
     </div>
     </>
   );

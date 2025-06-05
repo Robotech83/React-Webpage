@@ -1,6 +1,8 @@
 import React from 'react';
+import { ThemeUIProvider } from 'theme-ui'; // Importing ThemeUIProvider for theme management
+import { theme } from '../../theme/theme'; // Importing the custom theme
 
-import './topBar.css'
+// import './topBar.css'
 
 export const TopBar = () => { //named export
   return (
