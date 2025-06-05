@@ -4,7 +4,7 @@ import { ThemeProvider } from 'theme-ui';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { theme } from './theme/theme';
-import { WebDev } from './Pages/';
+import { WebDev } from './Pages/WebDev';
 import Robotics from './Pages/Robotics';
 import About from './Pages/About'; // ✅ Make sure this path matches your folder structure
 
