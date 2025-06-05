@@ -13,6 +13,7 @@
     "@emotion/react": "^11.14.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2",
     "theme-ui": "^0.17.2"
   },
   "devDependencies": {
