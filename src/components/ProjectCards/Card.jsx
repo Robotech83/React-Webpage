@@ -1,19 +1,16 @@
 import React from 'react';
-import './card.css' // Importing the CSS file for project card styling
+import './card.css'; // CSS stays the same
 
-
-export const ProjectCrd = () => {
-
+export const ProjectCrd = ({ title, description, github }) => {
   return (
-    <>
-      <section className="project-grid">
-        <div className="project-card">
-          <h3>Sonny Voice Assistant</h3>
-          <p>Online AI assistant built with Python, OpenAI, and Pyttsx3.</p>
-          <a href="https://github.com/Robotech83/Sonny-Voice" target="_blank">View on GitHub</a>
-        </div>
-      </section>
-    </>
+    <section className="project-grid">
+      <div className="project-card">
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <a href={github} target="_blank" rel="noopener noreferrer">
+          View on GitHub
+        </a>
+      </div>
+    </section>
   );
 };
-
