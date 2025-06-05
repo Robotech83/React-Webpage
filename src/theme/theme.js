@@ -43,7 +43,7 @@ export const theme = {
   ':hover': {
     color: 'primary',
   },
-}
+},
 
     contactText: {
       fontSize: 1,
