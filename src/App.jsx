@@ -18,7 +18,7 @@ function App() {
         <TopBar />
         <NavBar />
         {/* <Robotics /> */}
-        <WebDev />
+        <Robotics />
         {/* The WebDev component displays a header and a grid of web development projects, each with a title, description, and links to GitHub repositories. */}
       
         <div className="footer">

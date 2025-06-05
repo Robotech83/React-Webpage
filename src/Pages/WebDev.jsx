@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 import React, { useState } from 'react';
 import Header from '../components/Header/Header.jsx';
-import { ProjectCrd } from '../components/ProjectCards/Card.jsx';
+import { ProjectCrd } from '../components/ProjectCards/DevCard.jsx';
 
 const projects = [
   {
