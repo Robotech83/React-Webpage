@@ -1,6 +1,7 @@
 export const theme = {
   initialColorModeName: 'default',
   useColorModeMediaQuery: true,
+
   colors: {
     text: '#000',
     background: '#fff',
@@ -51,6 +52,29 @@ export const theme = {
       overflow: 'hidden',
       mb: 3,
       boxShadow: '0 2px 6px rgba(0,0,0,0.25)',
+    },
+
+    pageHeader: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: '10vh',
+      textAlign: 'center',
+      px: 3,
+      bg: 'background',
+      color: 'text',
+    },
+    pageHeaderTitle: {
+      fontSize: 5,
+      fontWeight: 'bold',
+      mb: 2,
+      color: 'primary',
+    },
+    pageHeaderDescription: {
+      fontSize: 2,
+      color: 'text',
+      opacity: 0.8,
     },
   },
 
