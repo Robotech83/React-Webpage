@@ -65,12 +65,14 @@ export const theme = {
       bg: 'background',
       color: 'text',
     },
+
     pageHeaderTitle: {
       fontSize: 5,
       fontWeight: 'bold',
       mb: 2,
       color: 'primary',
     },
+
     pageHeaderDescription: {
       fontSize: 2,
       color: 'text',
