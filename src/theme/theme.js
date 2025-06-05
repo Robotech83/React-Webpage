@@ -1,4 +1,6 @@
 export const theme = {
+  initialColorModeName: 'default',
+  useColorModeMediaQuery: true,
   colors: {
     text: '#000',
     background: '#fff',
@@ -11,6 +13,51 @@ export const theme = {
       },
     },
   },
+
+  styles: {
+    sideMenu: {
+      position: 'fixed',
+      top: 0,
+      right: 0,
+      height: '100vh',
+      width: '250px',
+      bg: 'background',
+      color: 'text',
+      zIndex: 1000,
+      p: 3,
+      transition: 'transform 0.3s ease-in-out',
+    },
+    menuText: {
+      fontSize: 1,
+      lineHeight: 'body',
+      mb: 3,
+    },
+    contactText: {
+      fontSize: 1,
+      mt: 3,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 2,
+    },
+  },
+
+  buttons: {
+    close: {
+      bg: 'transparent',
+      color: 'primary',
+      fontSize: 3,
+      p: 0,
+      cursor: 'pointer',
+      mb: 3,
+    },
+  },
+
+  fonts: {
+    body: 'system-ui, sans-serif',
+  },
+
+  fontSizes: [12, 14, 16, 20, 24, 32, 48],
+  space: [0, 4, 8, 16, 32, 64],
 };
 
 
