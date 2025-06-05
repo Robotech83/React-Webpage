@@ -1,6 +1,8 @@
-/** @jsxImportSource theme-ui */
 import React from "react";
-import { Box, Button } from "theme-ui";
+/** @jsxImportSource theme-ui */
+import { Box, Button, Image } from "theme-ui";
+import avatar from '../../assets/Pictures/Sonny.jpg'; // ✅ fix the path based on file location
+
 
 export const SideMenu = ({ isOpen, onClose }) => {
   return (
@@ -10,13 +12,23 @@ export const SideMenu = ({ isOpen, onClose }) => {
         transform: isOpen ? "translateX(0)" : "translateX(100%)",
       }}
     >
+     
       <Button onClick={onClose} variant="close">
         <i className="fa-solid fa-times" />
       </Button>
 
+       {/* ✅ Image from public folder */}
+       <Box sx={{ textAlign: 'center', px: 2 }}>
+      <Image
+        src={avatar}
+        alt="Robotech83"
+        variant="styles.sideImage"
+      />
+      </Box>
+
       <Box variant="styles.menuText">
         <p>
-          (Robotech83) <br />
+          Robotech83 <br />
           Building beautiful webpages and applications.<br />
           Building Robots and other mechanical devices.<br />
           Auto Mechanic for over 10 years.

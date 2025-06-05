@@ -39,6 +39,19 @@ export const theme = {
       flexDirection: 'column',
       gap: 2,
     },
+    sideImage: {
+      width: '100%',
+      height: 'auto',
+      maxHeight: '200px',
+      objectFit: 'cover',
+      borderTopLeftRadius: '9999px',
+      borderTopRightRadius: '9999px',
+      borderBottomLeftRadius: 0,
+      borderBottomRightRadius: 0,
+      overflow: 'hidden',
+      mb: 3,
+      boxShadow: '0 2px 6px rgba(0,0,0,0.25)',
+    },
   },
 
   buttons: {
@@ -59,5 +72,3 @@ export const theme = {
   fontSizes: [12, 14, 16, 20, 24, 32, 48],
   space: [0, 4, 8, 16, 32, 64],
 };
-
-

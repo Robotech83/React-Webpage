@@ -1,14 +1,7 @@
 import React from 'react';
 import { ThemeUIProvider } from 'theme-ui'; 
 import { theme } from './theme/theme';
-
-// import { TopBar } from './components/TopAndNavBar/TopBar';
-// import { NavBar } from './components/TopAndNavBar/NavBar';
-// import Header from './components/Header/Header';
-// import Robotics from './Pages/Robotics';
-// import Footer from './components/Footer/Footer';
-// import Subfooter from './components/Footer/Subfooter';
-
+// Importing the theme from the theme directory
 import {TopBar} from './components/TopAndNavBar/TopBar';
 import {NavBar} from './components/TopAndNavBar/NavBar'; 
 import Header from './components/Header/Header';
