@@ -1,37 +1,57 @@
-
+/** @jsxImportSource theme-ui */
 import React from "react";
-import { Box } from "theme-ui";
-import { Hamburger } from "../Hambuger/Hambuger";
-import DarkModeToggle from "../DarkMode/DarkMode";
+import { Box, Link, NavLink } from "theme-ui";
 
 export const NavBar = () => {
   return (
-    <Box
-      className="navbar"
-      sx={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        bg: "background", // 👈 will now switch with dark mode
-        color: "text",     // 👈 will now switch with dark mode
-        px: 4,
-        py: 3,
-      }}
-    >
+    <Box as="nav" sx={{ display: "flex", gap: 4, px: 4, py: 3, bg: "background", alignItems: "center" }}>
+      {/* Home */}
+      <NavLink href="/" sx={{ variant: "styles.navLink" }}>Home</NavLink>
 
-      <Box sx={{color:'text'}}>hello</Box>
-      
-      <Box sx={{ display: "flex", gap: 3 }}>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      {/* About with dropdown */}
+      <Box sx={{ position: "relative", ":hover .dropdown": { display: "block" } }}>
+        <NavLink href="#" sx={{ variant: "styles.navLink" }}>About</NavLink>
+        <Box className="dropdown" sx={dropdownMenuStyles}>
+          <NavLink href="/about" sx={dropdownItem}>Bio</NavLink>
+          <NavLink href="/resume" sx={dropdownItem}>Resume</NavLink>
+        </Box>
       </Box>
 
-      <Box sx={{ display: "flex", gap: 3 }}>
-        <DarkModeToggle />
-        <Hamburger />
+      {/* Portfolio with dropdown */}
+      <Box sx={{ position: "relative", ":hover .dropdown": { display: "block" } }}>
+        <NavLink href="#" sx={{ variant: "styles.navLink" }}>Portfolio</NavLink>
+        <Box className="dropdown" sx={dropdownMenuStyles}>
+          <NavLink href="/web-dev" sx={dropdownItem}>Web Dev</NavLink>
+          <NavLink href="/robotics" sx={dropdownItem}>Robotics</NavLink>
+          <NavLink href="/gamedev" sx={dropdownItem}>Game Dev</NavLink>
+        </Box>
       </Box>
     </Box>
   );
+};
+
+// Reusable dropdown styles
+const dropdownMenuStyles = {
+  display: "none",
+  position: "absolute",
+  top: "100%",
+  left: 0,
+  bg: "background",
+  boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+  p: 2,
+  borderRadius: 2,
+  zIndex: 99,
+  minWidth: "160px",
+};
+
+const dropdownItem = {
+  display: "block",
+  px: 3,
+  py: 2,
+  textDecoration: "none",
+  color: "text",
+  ":hover": {
+    bg: "primary",
+    color: "background"
+  }
 };
