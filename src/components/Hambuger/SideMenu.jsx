@@ -1,47 +1,47 @@
 import React from "react";
-/** @jsxImportSource theme-ui */ // Enables Theme UI JSX syntax
-import { Box, Button } from "theme-ui";
+/** @jsxImportSource theme-ui */
+import { Box, Button, Image } from "theme-ui";
+import avatar from '../../assets/Pictures/Sonny.jpg'; // ✅ fix the path based on file location
 
-// SideMenu component takes two props:
-// - isOpen (bool): determines whether it's visible
-// - onClose (function): closes the menu
+
 export const SideMenu = ({ isOpen, onClose }) => {
   return (
     <Box
+      variant="styles.sideMenu"
       sx={{
-        position: "fixed",             // Locks it to screen
-        top: 0,
-        right: 0,                      // Anchored to right edge
-        height: "100vh",              // Full screen height
-        width: "250px",               // Fixed width menu
-        bg: "black",                  // Dark background
-        color: "white",               // White text
-        zIndex: 1000,                 // Above other elements
-        p: 3,                          // Padding around content
-        transform: isOpen ? "translateX(0)" : "translateX(100%)", // Slide in/out
-        transition: "transform 0.3s ease-in-out", // Smooth animation
+        transform: isOpen ? "translateX(0)" : "translateX(100%)",
       }}
     >
-      {/* Close button */}
-      <Button
-        onClick={onClose}
-        sx={{
-          mb: 3,
-          color: "#ff7714",
-          bg: "transparent",
-          fontSize: 3,
-          p: 0,
-          cursor: "pointer",
-        }}
-      >
-        <i className="fa-solid fa-times" /> {/* Font Awesome "X" icon */}
+     
+      <Button onClick={onClose} variant="close">
+        <i className="fa-solid fa-times" />
       </Button>
 
-      {/* Navigation or Info Items */}
-      <p>⚙️ Robotics</p>
-      <p>🧠 AI Projects</p>
-      <p>🕹️ Game Dev</p>
-      <p>📞 Contact</p>
+       {/* ✅ Image from public folder */}
+       <Box sx={{ textAlign: 'center', px: 2 }}>
+      <Image
+        src={avatar}
+        alt="Robotech83"
+        variant="styles.sideImage"
+      />
+      </Box>
+
+      <Box variant="styles.menuText">
+        <p>
+          Robotech83 <br />
+          Building beautiful webpages and applications.<br />
+          Building Robots and other mechanical devices.<br />
+          Auto Mechanic for over 10 years.
+        </p>
+      </Box>
+
+      <Box variant="styles.contactText">
+        <p>
+          <i className="fa-solid fa-phone"></i> (+1) 253</p>
+        <p>
+          <i className="fa-solid fa-envelope"></i> robotech83@protonmail.com
+        </p>
+      </Box>
     </Box>
   );
 };
