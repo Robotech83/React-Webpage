@@ -9,7 +9,6 @@ import Robotics from './Pages/Robotics';
 import Footer from './components/Footer/Footer';
 import Subfooter from './components/Footer/Subfooter';
 import { WebDev } from './Pages/WebDev';
-import { About } from './Pages/About/About';
 
 
 function App() {

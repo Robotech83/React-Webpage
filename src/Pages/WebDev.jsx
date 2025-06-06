@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Header from '../components/Header/Header.jsx';
 import { ProjectCrd } from '../components/ProjectCards/DevCard.jsx';
 
+// === Project Data Array ===
+// Each project object contains details like title, description, GitHub link, demo link, and category.
 const projects = [
   {
     title: 'Todo List App',
@@ -21,11 +23,16 @@ const projects = [
 
 ];
 
+// === Categories for Filtering Projects ===
 const categories = ['all', 'tools', 'games'];
 
 export const WebDev = () => {
+  // === React state to track the active category ===
   const [activeCategory, setActiveCategory] = useState('all');
 
+  // === Filter logic ===
+  // If 'all' is selected, return every project.
+  // Otherwise, return only those matching the selected category.
   const filteredProjects =
     activeCategory === 'all'
       ? projects
@@ -33,12 +40,13 @@ export const WebDev = () => {
 
   return (
     <>
+    {/* === Page Header === */}
       <Header
         title="Web Development Projects"
         description="A showcase of my web development projects, including personal portfolios and tools."
       />
 
-      {/* Filter Buttons */}
+      {/* === Category Filter Buttons === */}
       <div sx={{ display: 'flex', justifyContent: 'center', gap: 3, mb: 4 }}>
         {categories.map((cat) => (
           <button
@@ -66,7 +74,7 @@ export const WebDev = () => {
         ))}
       </div>
 
-      {/* Project Cards */}
+      {/* === Filter Project Cards === */}
       <div
         sx={{
           variant: 'styles.cardGrid',

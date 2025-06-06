@@ -95,36 +95,45 @@ export const theme = {
   cardGrid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-    gap: 4,
-    maxWidth: '1000px',
+    gap: 6,
+    maxWidth: '5000px',
     mx: 'auto',
-    mt: 5,
-    px: 3,
+    mt: 9, // Add top margin for spacing
+    px: 6, // Add horizontal padding for spacing
   },
+
   card: {
-    backgroundColor: 'background',
-    color: 'text',
-    borderRadius: 3,
-    overflow: 'hidden',
-    textAlign: 'center',
-    boxShadow: '0 4px 10px rgba(0,0,0,0.5)',
-    transition: 'transform 0.3s ease',
-    ':hover': {
-      transform: 'scale(1.03)',
-    },
+  width: ['200%', '700px'],       // 👈 wider cards for large screens
+  backgroundColor: 'background',
+  color: 'text',
+  borderRadius: 3,
+  overflow: 'hidden',
+  textAlign: 'center',
+  boxShadow: '0 4px 10px rgba(0,0,0,0.5)',
+  transition: 'transform 0.3s ease',
+  ':hover': {
+    transform: 'scale(1.03)',
   },
+  p: 6,                            // Add padding inside the card
+  my: 6
+  ,                           // Vertical margin between cards
+},
+
+
   cardTitle: {
     mt: 3,
     mb: 2,
     fontSize: 3,
     fontWeight: 'bold',
   },
+  
   cardText: {
     px: 3,
     mb: 3,
     color: 'text',
     opacity: 0.85,
   },
+  
   cardLink: {
     display: 'inline-block',
     mt: 2,
