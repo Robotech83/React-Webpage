@@ -1,17 +1,26 @@
 import React from "react";
-
+import { Box, Text } from "theme-ui";
 
 const Footer = () => {
   return (
-    <div className="footer-container">
-      <div className="footer-contact">
-        <h4>Contact Me</h4>
-        <p>Phone: (+1) 253</p>
-        <p>Email: robotech83@protonmail.com</p>
-      </div>
-    </div>
+    <Box
+      as="footer"
+      sx={{
+        bg: "background",
+        color: "text",
+        px: 4,
+        py: 4,
+        borderTop: "1px solid",
+        borderColor: "muted",
+      }}
+    >
+      <Box sx={{ maxWidth: "1200px", mx: "auto" }}>
+        <Text as="h4" sx={{ color: "primary", mb: 2 }}>Contact Me</Text>
+        <Text>Phone: (+1) 253</Text>
+        <Text>Email: robotech83@protonmail.com</Text>
+      </Box>
+    </Box>
   );
 };
 
 export default Footer;
-// This component represents the footer section of the page, providing contact information.

@@ -1,16 +1,28 @@
 import React from "react";
+import { Box, Text, Link } from "theme-ui";
 
-const subfooter = () => {
-    return (
-        <div className="subfooter">
-            <p>© 2025 My Portfolio.</p>
-            <p>Designed by Robotech83</p>
-            <a href="#" className="back-to-top" id="backToTop">
-                <i className="fa-solid fa-chevron-up"></i>
-            </a>
-        </div>
-    );
-}
+import BackToTop from "../Buttons/BackToTop"; // Importing the BackToTop component
 
-export default subfooter;
-// This component represents the subfooter section of the page, providing copyright information and a back-to-top button.
+const Subfooter = () => {
+  return (
+    <Box
+      sx={{
+        position: "relative",
+        textAlign: "center",
+        bg: "background",
+        color: "text",
+        fontSize: 1,
+        py: 3,
+        borderTop: "1px solid",
+        borderColor: "muted",
+      }}
+    >
+      <Text>© 2025 My Portfolio.</Text>
+      <Text>Designed by Robotech83</Text>
+
+    <BackToTop /> {/* Adding the BackToTop button here */}
+    </Box>
+  );
+};
+
+export default Subfooter;
