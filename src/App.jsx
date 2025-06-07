@@ -9,6 +9,7 @@ import Robotics from './Pages/Robotics';
 import Footer from './components/Footer/Footer';
 import Subfooter from './components/Footer/Subfooter';
 import { WebDev } from './Pages/WebDev';
+import { HomePage } from './Pages/HomePage';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <TopBar />
         <NavBar />
         {/* <Robotics /> */}
-        <Robotics />
+        <HomePage />
         {/* The WebDev component displays a header and a grid of web development projects, each with a title, description, and links to GitHub repositories. */}
       
         <div className="footer">
