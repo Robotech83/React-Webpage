@@ -1,4 +1,3 @@
-/** @jsxImportSource theme-ui */
 import React, { useEffect, useState } from 'react';
 import { Button } from 'theme-ui';
 
@@ -28,21 +27,22 @@ const BackToTop = () => {
         position: 'fixed',
         bottom: 20,
         right: 20,
-        width: '40px',
-        height: '40px',
+        width: '44px',
+        height: '44px',
         borderRadius: '50%',
         bg: 'primary',
         color: 'background',
-        fontSize: 3,
+        fontSize: 4,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
         cursor: 'pointer',
         zIndex: 1000,
+        transition: 'opacity 0.3s ease-in-out',
         ':hover': {
           bg: 'highlight'
-        }
+        },
       }}
       aria-label="Back to top"
     >
