@@ -21,7 +21,7 @@ function App() {
         {/* <Robotics /> */}
 
         <Flex sx={{height:'300px', justifyContent:'center', alignItems: "center"}}>
-          Main Content Here
+          Main Content Here.
         </Flex>
 
         <Footer />
